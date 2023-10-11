@@ -1,0 +1,24 @@
+{% extends "base.html" %}  
+{% block title_suffix %}Ventas totales{% endblock %}
+{% block content %}
+    <h1>Unidades en existencia después de ventas web y en tienda</h1>
+    <table class="table-products">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Unidades Restantes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product, remaining_units in products %}
+            <tr>
+                <td>{{ product.ProductName }}</td>
+                <td>{{ remaining_units }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="cont-flex">
+        <a href="{% url 'index' %}" class="btn-add">Regresar</a>
+    </div>
+{% endblock %}

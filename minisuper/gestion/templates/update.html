@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title_suffix %}Editar Producto{% endblock %}
+
+{% block content %}
+<h2 class="sub-header">Editar Producto</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="cont-flex">
+        <button type="submit" class="btn-add">Guardar Cambios</button>
+        <a href="{% url 'index' %}" class="btn-add">Regresar</a>
+    </div>
+</form>
+{% endblock %}

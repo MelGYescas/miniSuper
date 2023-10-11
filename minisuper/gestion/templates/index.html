@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title_suffix %}Lista de Productos{% endblock %}
+
+{% block content %}
+<h2 class="sub-header">Lista de productos</h2>
+
+<table class="table-products">
+    <thead>
+        <tr>
+            <th>Nombre del Producto</th>
+            <th>Precio Unitario</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.ProductName }}</td>
+            <td>{{ product.UnitPrice }}</td>
+            <td>
+                <a href="{% url 'update' product.ProductId %}">Editar</a> |
+                <a href="{% url 'delete' product.ProductId %}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="cont-flex">
+    <a href="{% url 'create' %}" class="btn-add">Agregar nuevo producto</a>
+    <a href="{% url 'total_income_over_30_units' %}" class="btn-add">2. Ventas > 30</a>
+    <a href="{% url 'remaining_units_after_sales' %}" class="btn-add">3. Ventas totales</a>
+    <a href="{% url 'non_perishable' %}" class="btn-add">4. Perecederos</a>
+    <a href="{% url 'top_web_sales' %}" class="btn-add">5. Top Web</a>
+</div>
+{% endblock %}

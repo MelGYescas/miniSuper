@@ -1,0 +1,132 @@
+:root {
+    --color-fondo: #f4f4f4;
+    --color-header-footer: #333;
+
+    --color-white: white;
+    --color-gray: #aeaeae;
+    --color-hover: #3fa1dd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Establece un alto mínimo de 100% del alto de la ventana */
+}
+
+header,
+footer {
+    background-color: var(--color-header-footer);
+    color: var(--color-white);
+    text-align: center;
+    padding: 10px 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+form {
+    margin: 1rem 0;
+}
+
+form input,
+select {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: .5rem;
+    border: 1px solid var(--color-header-footer);
+    padding: 0.2rem;
+}
+
+p>label[for="id_Suspended"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px;
+    width: 50%;
+}
+
+p>input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    width: 40%;
+}
+
+
+.content {
+    margin: 1rem 0 2rem;
+    max-width: 100%;
+}
+
+@media (max-width: 576px) {
+
+    .cont-main {
+        max-width: 100%;
+    }
+}
+
+.sub-header {
+    font-size: 1.2rem;
+
+}
+
+
+.table-products {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 2rem;
+}
+
+.table-products th {
+    padding: .8rem;
+    background-color: var(--color-header-footer);
+    color: var(--color-white);
+
+}
+
+.table-products td {
+    padding: 10px;
+}
+
+.table-products tbody tr:nth-child(odd) {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+}
+
+.table-products tbody tr:hover {
+    background-color: var(--color-hover);
+    /* Fondo verde al pasar el mouse sobre las filas */
+}
+
+.btn-add {
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    color: var(--color-white);
+    background: var(--color-header-footer);
+    margin: 2rem 0 0;
+    border: none;
+    font-size: .9rem;
+}
+
+.btn-add:hover {
+    background-color: var(--color-hover);
+}
+
+.cont-flex {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}

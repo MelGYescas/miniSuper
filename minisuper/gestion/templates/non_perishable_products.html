@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}  
+{% block title_suffix %}Durables{% endblock %}
+{% block content %}
+    <h1>Productos No Perecederos</h1>
+    <table class="table-products">
+        <thead>
+            <tr>
+                <th>Nombre del Producto</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.ProductName }}</td>
+                <td>{{ product.CategoryId.CategoryName }}</td>
+                <td>${{ product.UnitPrice }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="cont-flex">
+        <a href="{% url 'index' %}" class="btn-add">Regresar</a>
+    </div>
+{% endblock %}

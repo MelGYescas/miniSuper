@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title_prefix %}MiniSuper | {% endblock %}{% block title_suffix %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <h1>MiniSuper</h1>
+        </header>
+
+        <main>
+            <div class="content">
+                {% block content %}
+                <!-- El contenido de las otras plantillas se insertará aquí -->
+                {% endblock %}
+            </div>
+        </main>
+
+        <footer>
+            <!-- Esto puede ser cualquier elemento de pie de página, como derechos de autor, enlaces, etc. -->
+            <p>&copy; 2023 Mel Yescas</p>
+        </footer>
+
+    <!-- Aquí puedes añadir scripts JS o cualquier otro recurso justo antes de cerrar el body -->
+
+    </body>
+</html>

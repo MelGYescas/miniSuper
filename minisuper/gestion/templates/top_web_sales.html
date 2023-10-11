@@ -1,0 +1,25 @@
+
+{% extends "base.html" %} 
+{% block title_suffix %}Top web{% endblock %}
+{% block content %}
+    <h1>Productos con mayores ventas por sitio web</h1>
+    <table class="table-products">
+        <thead>
+            <tr>
+                <th>Nombre del Producto</th>
+                <th>Unidades vendidas por web</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.ProductName }}</td>
+                <td>{{ product.UnitsOnOrder }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="cont-flex">
+        <a href="{% url 'index' %}" class="btn-add">Regresar</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+
+{% extends "base.html" %} 
+{% block title_suffix %}>30{% endblock %}
+{% block content %}
+    <h1>Total de ingresos por ventas mayores a 30 unidades</h1>
+    <p>Total: ${{ total_income }}</p>
+    <div class="cont-flex">
+        <a href="{% url 'index' %}" class="btn-add">Regresar</a>
+    </div>
+{% endblock %}

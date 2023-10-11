@@ -50,4 +50,10 @@ Asegúrate de tener Python instalado en tu sistema. Puedes descargarlo desde [py
    ```
 
    El proyecto estará disponible en `http://localhost:8000/gestion/` en tu navegador web.
+   
+## Video Demostrativo
+
+[![Ver Video Demo](https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/40px-YouTube_social_white_square_%282017%29.svg.png)](https://youtu.be/397rqOvtFlk)
+
+Puedes ver una demostración de este proyecto con los datos cargados que tu me diste [aquí](https://youtu.be/397rqOvtFlk).
 
